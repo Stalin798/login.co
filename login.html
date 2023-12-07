@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <title>Login</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .login{
+      position: relative;
+      color: blue;
+      font-weight: bolder;
+      font-size: 22px;
+      text-align: center;
+      top: 40px;
+    }
+    .count{
+      position: relative;
+      width: 300px;
+      height: 350px;
+      background-image: url("/Stalin/27994_88.jpg");
+      background-size: cover;
+      box-shadow: rgba(100,10,100,0.8)0 7px 29px 0;
+      left: 60px;
+      top: 40px;
+      border-radius: 40px;
+     overflow: hidden;
+    }
+    form{
+      position: relative;
+      text-align: center;
+      top: 50px;
+    }
+    form input{
+      border-radius: 40px;
+      padding: 10px;
+      background-color: transparent;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: white;
+      outline: none;
+    }
+    .but{
+      position: relative;
+      top: 70px;
+      left: 100px;
+    }
+    .but #sub{
+      border-radius: 40px;
+      text-align: center;
+      padding: 5px;
+      width:90px;
+      background-color: transparent;
+     /* border-top-color: transparent;
+      border-right-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: white;*/
+      border-top-color: red;
+      border-bottom-color: green;
+      color: white;
+    }
+    body{
+      background-image: url("/Stalin/27994_88.jpg");
+      background-size: cover;
+      height: 100vh;
+    }
+    input::placeholder{
+      color: red;
+      text-align: center;
+    }
+    input[type=text] {
+      color:white;
+    }
+    input[type=password] {
+      color: white;
+    }
+    .eye{
+      color: white;
+      position: relative;
+      bottom: 20px;
+      left: 70%;
+      
+    }
+    .eye eyeicon{
+      background-color: transparent;
+    }
+    html,body{
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    /*.count::before{
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 350px;
+      background-color: deeppink;
+      top: -50%;
+      left: -50%;
+      z-index: 1;
+      transform-origin: bottom right;
+      overflow: hidden;
+      animation: animate 6s linear infinite;
+    }
+    @keyframes animate{
+      0%{
+        transform: rotate(0deg)
+      }
+      100%{
+        transform: rotate(360deg)
+      }
+    }*/
+    /*.count::after{
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 350px;
+      background-color: deeppink;
+      top: -50%;
+      left: -50%;
+      transform-origin: bottom right;
+      z-index: 1;
+      animation: animate 6s linear infinite;
+      animation-delay: -3s;
+    }*/
+    
+  </style>
+</head>
+
+<body>
+  <div class = "count">
+  <div class = "login">
+    Login
+  </div>
+  <br>
+<form>
+  <input type = "text" placeholder = "Enter user name" id = "text">
+  <br><br>
+  <input type = "password" placeholder="Enter password" id = "password">
+</form>
+<br>
+<div class = "but">
+  <button id = "sub">Login</button>
+</div>
+<div class = "eye">
+  <input type = "checkbox" id = "eyeicon">
+</div>
+</from>
+    </form>
+</div>
+<script>
+  let eyeicon = document.getElementById("eyeicon");
+  let password = document.getElementById("password");
+  let sub = document.getElementById("sub");
+  let text = document.getElementById("text");
+  eyeicon .onclick = function(){
+    if(password.type == "password"){
+      password.type = "text";
+    }else{
+      password.type = "password";
+    }
+  }
+  sub.onclick = function(){
+    password.reset();
+  }
+  sub.onclick = function(){
+    alert("Login Successfully Completed")
+  }
+  
+/*  let sub = document.getElementById("sub");
+  let icon = document.getElementById("text");
+  
+  sub .onclick = function(){
+    if(icon.type == "password"){
+      icon.type = "text";
+    }else{
+      icon.type = "password";
+    }
+  }*/
+</script>
+</body>
+
+</html>
